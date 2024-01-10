@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f853ce2d886f004f9fcae86e529804a, type: 3}
+  m_Name: Lightning Orb
+  m_EditorClassIdentifier: 
+  skillImage: {fileID: 21300000, guid: a65312b014ecf4b4b9b62bd2866a268c, type: 3}
+  skillOption: "\uC804\uAE30 \uD3ED\uD48D\uC744 \uBC1C\uC0DD\uC2DC\uD0B5\uB2C8\uB2E4."
+  skillDamageText: "\uB370\uBBF8\uC9C0 \uBC30\uC728 : 120%"
+  skillObj: {fileID: 1008656586100278, guid: 70df949521e109c4f9143f20e87054aa, type: 3}
