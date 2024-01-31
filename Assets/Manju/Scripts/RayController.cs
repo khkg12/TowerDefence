@@ -17,18 +17,21 @@ public class RayController : MonoBehaviour
         }
 
         // shoot raycast && canvas click exception 
+        
+
+    }
+
+    void CreateTower()
+    {
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition); // 마우스 지점으로부터 레이를 쏨.
             RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                Tile tile;
-
-                if (hit.collider.gameObject.TryGetComponent<Tile>(out tile))
+            if (Physics.Raycast(ray, out hit)) // 레이에 부딪힌값이 존재 시
+            {                
+                if (hit.collider.gameObject.TryGetComponent(out Tile tile)) // 부딪힌 콜라이더가 Tile을 가지고 있다면
                 {
-                    TowerManager.Instance.SetSelectTile(tile);
+                    TowerManager.Instance.SetSelectTile(tile); // 30 ~ 42 타워 설치과정
                     UiManager.Instance.TowerOptionUi(false);
                     if (tile.towerObj == null && tile.isBuildAble)
                     {
@@ -44,6 +47,5 @@ public class RayController : MonoBehaviour
                 }
             }
         }
-
     }
 }
